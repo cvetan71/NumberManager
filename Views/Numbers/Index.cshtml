@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@section Scripts {    
+    <script src="~/js/numbers.js"></script>
+}
+
+<h1 class="display-3">Header</h1>
+<h2 class="mb-4">Subheader</h2>
+
+<div class="mb-4">
+    <div class="btn-group" role="group" aria-label="Number actions">
+        <button type="button" class="btn btn-light space-right" onclick="sendAction('ClearNumbers')">Clear Numbers</button>
+        <button type="button" class="btn btn-light space-right" onclick="sendAction('AddNumber')">Add Number</button>
+        <button type="button" class="btn btn-light" onclick="sendAction('SumNumbers')">Sum Numbers</button>
+    </div>
+</div>
+
+<div id="numberContainer">
+    @await Html.PartialAsync("_NumberListPartial", (object)Model)
+</div>

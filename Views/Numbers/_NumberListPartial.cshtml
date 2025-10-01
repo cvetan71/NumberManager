@@ -1,0 +1,8 @@
+﻿<div class="mb-3">
+    @foreach (var num in Model.Numbers)
+    {
+        <span class="btn btn-light mb-2 me-2">@num</span>
+    }
+</div>
+<p><strong>Count:</strong> @Model.Count</p>
+<p><strong>Sum:</strong> @(Model.Sum?.ToString() ?? "Not summed")</p>
